@@ -1,0 +1,16 @@
+# Базовый образ
+FROM python:3.9-slim
+
+# Установка зависимостей
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+# Копирование файлов приложения в контейнер
+COPY . /app/
+WORKDIR /app/
+
+# Задание переменной окружения
+ENV CONTAINERENV=True
+
+# Команда для запуска приложения
+CMD [ "python", "app.py" ]
