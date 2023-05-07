@@ -1,2 +1,2 @@
 # Raiffeisen-Bootcamp
-Home workd for Raiffeisen bootcamp (DevOps)
+Home workdfor Raiffeisen bootcamp (DevOps)
