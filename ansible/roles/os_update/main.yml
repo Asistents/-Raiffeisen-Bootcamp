@@ -1,0 +1,30 @@
+---
+- name: Update package cache
+  apt:
+    update_cache: yes
+
+- name: Upgrade packages
+  apt:
+    upgrade: dist
+    autoremove: yes
+    allow_unauthenticated: yes
+
+- name: Remove old kernels
+  apt:
+    name: "{{ item }}"
+    state: absent
+  with_items:
+    - "{{ query('dpkg', '-l | grep linux-image | awk '{print $2}' | grep -v `uname -r` | head -n -2 | tr '\n' ' '` }}"
+
+- name: Reboot if required
+  reboot:
+    post_reboot_delay: 30
+    connect_timeout: 5
+    reboot_timeout: 600
+    msg: "System restarted due to kernel upgrade"
+  when: "'yes' in ansible_facts['apt']['upgradeable']"
+
+- name: Wait for server to come back online
+  wait_for_connection:
+    delay: 30
+    timeout: 300

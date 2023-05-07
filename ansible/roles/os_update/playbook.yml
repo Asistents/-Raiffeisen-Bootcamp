@@ -1,0 +1,7 @@
+---
+- name: Update OS on servers
+  hosts: servers
+  become: yes
+
+  roles:
+    - os_update
