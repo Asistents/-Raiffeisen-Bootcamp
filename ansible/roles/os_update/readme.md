@@ -51,8 +51,7 @@ localhost ansible_connection=local
 touch playbook.yml
 Откроем файл в текстовом редакторе и добавим следующий код:
 
-yaml
-Copy code
+
 ---
 - name: Update OS
   hosts: servers
