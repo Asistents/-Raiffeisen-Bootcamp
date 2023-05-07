@@ -7,6 +7,7 @@ cd ~/ansible
 Создадим структуру директорий для нашей роли:
 
 mkdir -p roles/os_update/{tasks,handlers}
+
 Затем создадим файл tasks/main.yml, где опишем задачи, которые необходимо выполнить для обновления операционной системы:
 
 touch roles/os_update/tasks/main.yml
