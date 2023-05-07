@@ -2,6 +2,7 @@
 Homework for Raiffeisen bootcamp (DevOps)
 
 There were 2 task.
+
 1.Тестовое задание: Автоматизированное обновление операционной системы c помощью Ansible
 (Automated operating system update using Ansible)
 Включает следующие цели:
