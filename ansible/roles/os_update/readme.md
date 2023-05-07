@@ -39,6 +39,7 @@ touch inventory
 
 [servers]
 localhost ansible_connection=local
+
 Здесь мы определяем группу servers и указываем localhost как хост, к которому будет применяться наша роль. 
 Мы также указываем ansible_connection=local, чтобы сообщить Ansible, что наш хост находится на локальной машине.
 
@@ -47,6 +48,7 @@ localhost ansible_connection=local
 
 
 touch playbook.yml
+
 Откроем файл в текстовом редакторе и добавим следующий код:
 
 ---
