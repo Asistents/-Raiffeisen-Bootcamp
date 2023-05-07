@@ -59,4 +59,6 @@ touch playbook.yml
 Запустить playbook:
 
 ansible-playbook -i inventory playbook.yml
-Эта команда запустит наш playbook и применит роль os_update к хосту localhost. Ansible выполнит задачи из файла tasks/main.yml, обновит операционную систему и завершит свою работу.
+
+Эта команда запустит наш playbook и применит роль os_update к хосту localhost. 
+Ansible выполнит задачи из файла tasks/main.yml, обновит операционную систему и завершит свою работу.
