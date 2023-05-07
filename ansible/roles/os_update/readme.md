@@ -34,6 +34,7 @@ touch roles/os_update/tasks/main.yml
 
 cd ~/ansible
 touch inventory
+
 Откроем файл в текстовом редакторе и добавим в него следующее содержимое:
 
 [servers]
