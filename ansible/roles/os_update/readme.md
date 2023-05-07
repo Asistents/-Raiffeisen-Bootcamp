@@ -14,8 +14,7 @@ mkdir -p roles/os_update/{tasks,handlers}
 touch roles/os_update/tasks/main.yml
 Откроем файл main.yml в текстовом редакторе и добавим следующий код:
 
-yaml
-Copy code
+
 ---
 - name: Update OS packages
   become: true
